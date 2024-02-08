@@ -15,18 +15,23 @@
         <div class="column is-one-quarter">
           <label class="label" for="top-left">Top Left</label>
           <input id="topLeft" name="top-left" type="text" class="input">
+          <!-- TODO: position the errors absolutely so they don't push down the box -->
+          <i id="topLeftError" class="has-text-danger is-hidden errorMessage">Must be numeric pixel value</i>
         </div>
         <div class="column is-one-quarter">
           <label class="label" for="top-right">Top Right</label>
           <input id="topRight" name="top-right" type="text" class="input">
+          <i id="topRightError" class="has-text-danger is-hidden errorMessage">Must be numeric pixel value</i>
         </div>
         <div class="column is-one-quarter">
           <label class="label" for="bottom-left">Bottom Left</label>
           <input id="bottomLeft" name="bottom-left" type="text" class="input">
+          <i id="bottomLeftError" class="has-text-danger is-hidden errorMessage">Must be numeric pixel value</i>
         </div>
         <div class="column is-one-quarter">
           <label class="label" for="bottom-right">Bottom Right</label>
           <input id="bottomRight" name="bottom-right" type="text" class="input">
+          <i id="bottomRightError" class="has-text-danger is-hidden errorMessage">Must be numeric pixel value</i>
         </div>
       </div>
     </section>
