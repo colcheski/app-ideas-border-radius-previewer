@@ -25,6 +25,7 @@ const inputs = [
   }
 ];
 const box = document.getElementById('cornersBox');
+const cssBtn = document.getElementById('cssBtn');
 
 function validateInput(input, errorElement) {
   if (isNaN(input.value)) {
@@ -64,4 +65,17 @@ for (const input of inputs) {
     updateBorderRadius(event.target.name, input.inputElement.value);
   })
 }
+
+cssBtn.addEventListener('click', () => {
+  const cssSnippet = 
+  `
+  {
+    border-top-left-radius: ${box.style.borderTopLeftRadius || 0};
+    border-top-right-radius: ${box.style.borderTopRightRadius || 0};
+    border-bottom-left-radius: ${box.style.borderBottomLeftRadius || 0};
+    border-bottom-right-radius: ${box.style.borderBottomRightRadius || 0};
+  }
+  `
+  navigator.clipboard.writeText(cssSnippet);
+})
 
