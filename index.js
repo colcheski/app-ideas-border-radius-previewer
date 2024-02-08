@@ -67,15 +67,17 @@ for (const input of inputs) {
 }
 
 cssBtn.addEventListener('click', () => {
+  const zeroPx = '0px';
   const cssSnippet = 
   `
   {
-    border-top-left-radius: ${box.style.borderTopLeftRadius || 0};
-    border-top-right-radius: ${box.style.borderTopRightRadius || 0};
-    border-bottom-left-radius: ${box.style.borderBottomLeftRadius || 0};
-    border-bottom-right-radius: ${box.style.borderBottomRightRadius || 0};
+    border-top-left-radius: ${box.style.borderTopLeftRadius || zeroPx};
+    border-top-right-radius: ${box.style.borderTopRightRadius || zeroPx};
+    border-bottom-left-radius: ${box.style.borderBottomLeftRadius || zeroPx};
+    border-bottom-right-radius: ${box.style.borderBottomRightRadius || zeroPx};
   }
   `
   navigator.clipboard.writeText(cssSnippet);
+  /* TODO: Add some library to put up toasts on the page when copying css */
 })
 
