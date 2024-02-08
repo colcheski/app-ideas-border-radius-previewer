@@ -1,4 +1,4 @@
-# Bin2Dec
+# Border Radius Previewer
 
 Suggested project from https://github.com/florinpop17/app-ideas
 
